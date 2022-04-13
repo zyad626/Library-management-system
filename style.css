@@ -1,0 +1,31 @@
+body{
+    margin: 0%;
+}
+header{
+    background-color: #f1f1f1;
+}
+    #logo img{
+        width: 200px;
+        height: 200px;
+    }
+    header h1{
+        display: inline;
+        position: relative;
+        bottom: calc(100px - 16px);
+        /* left: calc(50% - 350px); */
+    }
+    .header-right{
+        display: inline;
+        float: right;
+        margin-top: calc(100px - 9px);
+    }
+        .header-right a{
+            font-size: 18px;
+            line-height: 25px;
+            text-decoration: none;
+            color: black;
+            padding: 20px 35px;
+            margin-right: 35px;
+            background-color: dodgerblue;
+            color: white;
+        }
