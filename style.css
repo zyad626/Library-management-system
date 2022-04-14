@@ -2,22 +2,22 @@ body{
     margin: 0%;
 }
 header{
+    float: left;
+    width: 100%;
     background-color: #f1f1f1;
 }
     #logo img{
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
+        float: left;
     }
     header h1{
-        display: inline;
-        position: relative;
-        bottom: calc(100px - 16px);
-        /* left: calc(50% - 350px); */
+        float: left;
+        margin-top:calc(75px - 16px);
     }
     .header-right{
-        display: inline;
-        float: right;
-        margin-top: calc(100px - 9px);
+ 
+        margin: calc(75px - 0px) 0px 0px 83%;
     }
         .header-right a{
             font-size: 18px;
@@ -28,4 +28,5 @@ header{
             margin-right: 35px;
             background-color: dodgerblue;
             color: white;
+            border-radius: 4px;
         }
