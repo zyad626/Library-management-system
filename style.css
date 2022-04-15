@@ -32,6 +32,7 @@ header{
         }
 nav{
     background-color: #F58A07;
+    /* background-color: dodgerblue; */
     text-align: center;
     padding: 30px 0px;
     margin: 0px 10%;
@@ -50,3 +51,21 @@ nav{
     nav a.with-border{
         border-right: 1px solid white;
     }
+footer{
+    background-color: #f1f1f1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 0px;
+}
+    footer .copy-right{
+        float: right;
+        margin-right: 5%;
+    }
+    footer #footer-links{
+        margin-left: 5%;
+    }
+        footer #footer-links a{
+            color: black;
+        }
