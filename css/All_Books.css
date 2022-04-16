@@ -1,5 +1,6 @@
 .cards{
-    padding: 50px 50px;
+    padding: 50px;
+    display: inline-block;
 }
 .book{
     float: left;
@@ -8,8 +9,7 @@
     text-align: center;
     width: 250px;
     height: auto;
-    margin-left: 30px;
-    margin-bottom: 30px;
+    margin: 15px;
 }
     .book img{
         width: 250px;
