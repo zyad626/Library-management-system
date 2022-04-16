@@ -1,0 +1,36 @@
+.cards{
+    padding: 50px 50px;
+}
+.book{
+    float: left;
+    border: 2px outset;
+    border-radius: 9px;
+    text-align: center;
+    width: 250px;
+    height: auto;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+    .book img{
+        width: 250px;
+        height: auto;
+    }
+    .title{
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    .author{
+        /* text-align: left; */
+        font-size: 20px;
+    }
+    .book a{
+        /* display: inline-block; */
+        font-size: 24px;
+        background-color: #F58A07;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: 0px 4px 0px #999;
+        border-radius: 15px;
+    }
