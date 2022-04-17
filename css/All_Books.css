@@ -1,7 +1,11 @@
 .cards{
     padding: 50px;
     display: inline-block;
+    height: 100%;
 }
+    .cards h1{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
 .book{
     float: left;
     border: 2px outset;
