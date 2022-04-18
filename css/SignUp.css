@@ -1,0 +1,32 @@
+body{
+    background-color: #F1F5F9;
+}
+div{
+    text-align: center;
+    padding: 20px;
+}
+div a{
+    display: inline-block;
+    margin: 10px;
+}
+div form{
+    display: inline-block;
+    background-color:white;
+}
+div input{
+    height: 30px;
+    width: 350px;
+}
+button{
+    background-color: #0D67B5;
+    color: white;
+    font-size: 15px;
+}
+div img{
+    width: 100px;
+    height: 100px;
+}
+label{
+    display: block;
+    text-align: left;
+}
