@@ -1,4 +1,6 @@
 .cards-wrapper{
+    position: relative;
+    z-index: 1;
     width: 100%;
     margin-top: 50px;
     text-align: center;
