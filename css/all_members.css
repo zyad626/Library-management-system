@@ -1,14 +1,14 @@
 .cards-wrapper{
-    /* padding: 50px; */
-    display: inline-block;
-    height: 100%;
     width: 100%;
+    margin-top: 50px;
+    text-align: center;
 }
     .cards-wrapper .member{
-        float: left;
+        /* float: left; */
+        display: inline-block;
         text-align: center;
         width: 12%;
-        margin: 50px 50px 0px 50px;
+        margin: 0px 50px 0px 50px;
     }
         .cards-wrapper .member img{
             width: 125px;
@@ -18,8 +18,8 @@
             z-index: 2;
         }
         .cards-wrapper .member .info{
-            /* background-color: dodgerblue; */
-            /* color: white; */
+            /* background-color: dodgerblue;
+            color: white; */
             background-color: #f1f1f1;
             color: black;
             position: relative;
@@ -28,6 +28,6 @@
             padding-top: 30px;
             border-radius: 9px;
             font-family: Arial, Helvetica, sans-serif;
-            border: 1px outset tan;
-            /* border: 1px outset #F58A07; */
+            /* border: 2px outset tan; */
+            border: 2px outset #F58A07;
         }
