@@ -55,7 +55,7 @@ nav{
 }
     nav a{
         color: white;
-        padding: 30px calc(12.5% - 2.1em);
+        padding: 30px calc(12.5% - 3.75ch);/*3.75 is half the average number of chars per link in the nav bar*/
         text-decoration: none;
         font-size: 17px; 
         margin: 0%;
