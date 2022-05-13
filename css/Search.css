@@ -1,0 +1,12 @@
+#searchbar{
+    text-align: center;
+    padding: 200px;
+}
+#searchbar input[type="text"]{
+    width: 700px;
+    font-size: 25px;
+}
+#searchbar input[type="image"]{
+    width: 25px;
+    height: 25px;
+}
