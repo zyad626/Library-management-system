@@ -1,5 +1,4 @@
 let USERS = JSON.parse( localStorage.getItem('users'))
-
 function add_data(){
   let Name =  document.getElementById("name").value
   let Email = document.getElementById("email").value
@@ -19,7 +18,6 @@ function add_data(){
     localStorage.setItem('users',JSON.stringify(USERS))
     console.log(USERS)
     window.open("../html/Login.html","_self")
-    //window.open("../html/Login.html?index="+Name+" "+Email+" "+Password, "_self")
   }
 }
 

@@ -1,0 +1,30 @@
+#details img{
+    width: 150px;
+    height: 150px; 
+    text-align: center;
+}
+#details{
+    margin-top:50px;
+    text-align: center;
+}
+#details #description{
+    margin-left: 550px;
+    padding-bottom: 900px;
+}
+#description{
+    margin-left: 10px;
+}
+#description h3{
+    text-decoration: underline;
+}
+#button{
+    text-align: center;
+}
+
+#button button{
+    background-color: #17A798;
+    color: white;
+    font-size: 15px;
+    border-radius:5px ;
+    width: 400px;
+}
