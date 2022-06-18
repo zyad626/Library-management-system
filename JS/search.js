@@ -46,6 +46,7 @@ const create_books = function(results){
         img.setAttribute("src", "../images/book1.png")
         title.setAttribute("class", "title")
         author.setAttribute("class", "author")
+        link.setAttribute("href", `../html/bookDetails.html?index=${book.id}`)
 
         title.textContent = book.title
         author.textContent = book.author
