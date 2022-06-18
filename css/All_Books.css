@@ -1,9 +1,9 @@
-.cards-wrapper{
+.books-wrapper{
     padding: 50px;
     display: inline-block;
     height: 100%;
 }
-    .cards-wrapper h1{
+    .books-wrapper h1{
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 .book{
