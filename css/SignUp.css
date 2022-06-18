@@ -17,11 +17,12 @@ div input{
     height: 30px;
     width: 350px;
 }
-button{
+#button{
     background-color: black;
     color: white;
     font-size: 15px;
     border-radius:5px ;
+    width: fit-content;
 }
 div img{
     width: 120px;
