@@ -15,7 +15,7 @@
     }
     
     div input{
-      width: 150px;
+      width: 88%;
       padding: 15px;
       margin: 5px 0 22px 0;
       border: none;
@@ -26,7 +26,7 @@
         text-align: left;
     }
     #FormContainer{
-        max-width: 300px;
+        max-width: 250px;
         padding: 10px;
         background-color: white;
     }
@@ -43,5 +43,5 @@
         background-color: #17A798;
         color: white;
         font-size: 15px;
-        margin-left: 15px;
+        width: 100%;
     }
