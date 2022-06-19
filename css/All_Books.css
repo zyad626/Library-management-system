@@ -1,22 +1,23 @@
 #books-wrapper{
-    padding: 50px;
-    display: inline-block;
-    height: 100%;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 5% 0%;
 }
     .books-wrapper h1{
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 .book{
-    float: left;
     border: 2px outset;
     border-radius: 9px;
     text-align: center;
-    width: 250px;
-    height: 353px;
-    margin: 15px;
+    display: inline-block;
+    text-align: center;
+    width: 13%;
+    margin: 1.5%;
 }
     .book img{
-        width: 250px;
+        width: 100%;
         height: 210px;
     }
     .title{
