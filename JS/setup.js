@@ -18,3 +18,8 @@ if(localStorage.getItem("users") == null || localStorage.getItem("books") == nul
 
 if(localStorage.getItem("session_type") == "user")
     document.querySelectorAll(".for-admin").forEach((element)=>element.style.display = "none")
+
+let current_user = JSON.parse(localStorage.getItem("current_user"))
+let info_element = document.querySelector(".icon-div")
+let user_name = info_element.querySelector("h3")
+ user_name.textContent= current_user.username

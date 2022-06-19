@@ -16,7 +16,7 @@ const create_books = function(results = books, parent_element = "cards-wrapper")
         let link = document.createElement("a")
 
         book_div.setAttribute("class", "book")
-        img.setAttribute("src", "../images/book1.png")
+        img.setAttribute("src", `../images/${book.img}`)
         title.setAttribute("class", "title")
         author.setAttribute("class", "author")
         link.setAttribute("href", `../html/bookDetails.html?index=${book.id}`)
