@@ -93,12 +93,9 @@ function submitDeleteForm() {
     }
   function submitBorrowForm() {
       let date = new Date()
-      console.log(new Date(pickupDate.value).getTime())
-      console.log(date.getTime())
-      if(pickupDate.value == returnDate.value || pickupDate.value > returnDate.value || 
-        new Date(pickupDate.value).getDate() < date.getDate() ||  new Date(pickupDate.value).getMonth() < date.getMonth()
+      if(pickupDate.value == returnDate.value || pickupDate.value > returnDate.value || new Date(pickupDate.value).getMonth() < date.getMonth()
         ||  new Date(pickupDate.value).getFullYear() < date.getFullYear()){
-        window.alert("wrong dates")
+        window.alert("pickup date from today and upwards and borrow period of minimum one day")
       }
       else{
         document.getElementById("borrowForm").style.display = "none";
@@ -112,12 +109,46 @@ function submitDeleteForm() {
         localStorage.setItem('books',JSON.stringify(Books))
         if(!Users[userId.id].borrowedBooks){
           Users[userId.id].borrowedBooks = Books[bookIndex].title
+          Users[userId.id].numberOfBorrowedBooks = 1
         }
         else{
-          Users[userId.id].borrowedBooks += ", "+Books[bookIndex].title
+          Users[userId.id].borrowedBooks += ","+Books[bookIndex].title
+          Users[userId.id].numberOfBorrowedBooks += 1
         }
         localStorage.setItem('users',JSON.stringify(Users))
       }
     }
     function closeBorrowForm() {
       document.getElementById("borrowForm").style.display = "none";}
+
+  //admin return book
+  function bookAvailable(){
+    var parameters = new URLSearchParams(window.location.search)
+    var bookIndex = parameters.get("index")
+    if(Books[bookIndex].isBorrowed == true){
+      Books[bookIndex].isBorrowed = false
+      localStorage.setItem('books',JSON.stringify(Books))
+      let i = Books[bookIndex].borrowUser
+      let number = Users[i].numberOfBorrowedBooks
+      if(number>1){
+        let titles = Users[i].borrowedBooks.split(',')
+        for(j =0; j<titles.length; j++){
+          if(titles[j] == Books[bookIndex].title){
+            titles.splice(j,1)
+            titles.join()
+            Users[i].borrowedBooks = titles
+            Users[i].numberOfBorrowedBooks -= 1
+            localStorage.setItem('users',JSON.stringify(Users))
+          } 
+        }
+      }
+      else{
+        Users[i].numberOfBorrowedBooks -= 1
+        delete Users[i].borrowedBooks;
+        localStorage.setItem('users',JSON.stringify(Users))
+      }
+    }
+    else{
+      window.alert("book is already avaliable")
+    }
+  }
