@@ -37,10 +37,44 @@
         <p id="Author"></p>
     </div>
 
-    <div id="button">
+    <div id="user_button" style="display:none ;">
         <button>rent</button>
     </div>
+    <div id="admin_buttons">
+        <button id="admin_button1" onclick="openEditForm()">Edit Book</button>  
+        <button  onclick="openDeleteForm()">Delete Book</button>
+    </div>
+
+    <div id="editForm">
+        <form id = "FormContainer">
+            <div>
+                <label>Title</label>
+                <input type="text" name="title" id="titleMod"d/>
+            </div>
+            <div>
+                <label>Description</label>
+                <input type="text" name="description" id="descriptionMod"/>
+            </div>
+            <div>
+                <label>Author</label>
+                <input type="text" name="author" id="authorMod"/>
+            </div>
+            <div>  <input type="button" id="button" value="Submit" onclick="submitEditForm()"></div>
+            <div>  <input type="button" id="button" value="Close" onclick="closeEditForm()"></div>
+        </form>
+    </div> 
     
+    <div id="deleteForm">
+        <form id = "FormContainer">
+            <div>
+                <label>confirm your password</label>
+                <input type="password" name="password" id="adminPassword"/>
+            </div>
+            <div>  <input type="button" id="button" value="Submit" onclick="submitDeleteForm()"></div>
+            <div>  <input type="button" id="button" value="Close" onclick="closeDeleteForm()"></div>
+        </form>
+    </div> 
+
     <footer>
         <span id="footer-links">
             <a href="">Privacy Policy</a> | <a href="">Terms and conditions</a> | <a href="">Security</a>
