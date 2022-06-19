@@ -17,6 +17,9 @@ let descriptionChange = document.getElementById('descriptionMod')
 let authorChange = document.getElementById('authorMod')
 
 function openEditForm() {
+  if (document.getElementById("deleteForm").style.display == "block"){
+    document.getElementById("deleteForm").style.display = "none";
+  }
     document.getElementById("editForm").style.display = "block";
     titleChange.value = Title.textContent
     descriptionChange.value = bookDescription.textContent
@@ -42,6 +45,9 @@ function submitEditForm() {
 
   let adminPassword = document.getElementById('adminPassword')
   function openDeleteForm() {
+    if (document.getElementById("editForm").style.display == "block"){
+      document.getElementById("editForm").style.display = "none";
+    }
     document.getElementById("deleteForm").style.display = "block";
     titleChange.value = Title.textContent
     descriptionChange.value = bookDescription.textContent
