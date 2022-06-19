@@ -35,8 +35,8 @@ const create_books = function(results = books, parent_element = "cards-wrapper")
     wrapper.appendChild(books_wrapper)
 }
 
-const create_users = function(results){
-    let wrapper = document.getElementById("cards-wrapper")
+const create_users = function(results = users, parent_element = "cards-wrapper"){
+    let wrapper = document.getElementById(parent_element)
     wrapper.innerHTML = ""
 
     let users_wrapper = document.createElement("div")
@@ -48,6 +48,7 @@ const create_users = function(results){
         let img = document.createElement("img")
         let info_div = document.createElement("div")
         let name_element = document.createElement("h2")
+        let id_element = document.createElement("h3")
 
         a.setAttribute("href", `../html/memberDetails.html?index=${member.id}`)
         member_div.setAttribute("class", "member")
@@ -55,11 +56,13 @@ const create_users = function(results){
         info_div.setAttribute("class","info")
 
         name_element.textContent = member.username
+        id_element.textContent = "#"+member.id
 
         a.appendChild(member_div)
         member_div.appendChild(img)
         member_div.appendChild(info_div)
         info_div.appendChild(name_element)
+        info_div.appendChild(id_element)
 
         users_wrapper.appendChild(a)
     })
