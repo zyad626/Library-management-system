@@ -93,8 +93,7 @@ function submitDeleteForm() {
     }
   function submitBorrowForm() {
       let date = new Date()
-      if(pickupDate.value == returnDate.value || pickupDate.value > returnDate.value || new Date(pickupDate.value).getMonth() < date.getMonth()
-        ||  new Date(pickupDate.value).getFullYear() < date.getFullYear()){
+      if(pickupDate.value == returnDate.value || pickupDate.value > returnDate.value || new Date(pickupDate.value).getFullYear() < date.getFullYear()){
         window.alert("pickup date from today and upwards and borrow period of minimum one day")
       }
       else{
@@ -131,14 +130,17 @@ function submitDeleteForm() {
       let i = Books[bookIndex].borrowUser
       let number = Users[i].numberOfBorrowedBooks
       if(number>1){
+        console.log(Users[i].borrowedBooks)
         let titles = Users[i].borrowedBooks.split(',')
         for(j =0; j<titles.length; j++){
           if(titles[j] == Books[bookIndex].title){
             titles.splice(j,1)
             titles.join()
-            Users[i].borrowedBooks = titles
+            Users[i].borrowedBooks = titles.toString()
             Users[i].numberOfBorrowedBooks -= 1
             localStorage.setItem('users',JSON.stringify(Users))
+            window.alert(Books[bookIndex].title+" is avaliable to borrow now")
+            break;
           } 
         }
       }
@@ -146,6 +148,7 @@ function submitDeleteForm() {
         Users[i].numberOfBorrowedBooks -= 1
         delete Users[i].borrowedBooks;
         localStorage.setItem('users',JSON.stringify(Users))
+        window.alert(Books[bookIndex].title+" is avaliable to borrow now")
       }
     }
     else{
