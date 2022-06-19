@@ -41,6 +41,8 @@ if(localStorage.getItem("current_user") != null){
     user_name.textContent= current_user.username
 }
 else{
+    localStorage.setItem("session_type", "user")
+    
     let links_div = document.createElement("div")
     let login_link = document.createElement("a")
     let signup_link = document.createElement("a")
