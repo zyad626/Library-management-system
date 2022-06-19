@@ -16,3 +16,5 @@ if(localStorage.getItem("users") == null || localStorage.getItem("books") == nul
     localStorage.setItem('books',JSON.stringify(books_data))
 }
 
+if(localStorage.getItem("session_type") == "user")
+    document.querySelectorAll(".for-admin").forEach((element)=>element.style.display = "none")
