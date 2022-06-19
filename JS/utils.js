@@ -16,7 +16,9 @@ const create_books = function(results = books, parent_element = "cards-wrapper")
         let link = document.createElement("a")
 
         book_div.setAttribute("class", "book")
-        img.setAttribute("src", `../images/${book.img}`)
+        if(book.img.includes("base64"))img.setAttribute("src", book.img)
+        else  img.setAttribute("src", `../images/${book.img}`)
+        
         title.setAttribute("class", "title")
         author.setAttribute("class", "author")
         link.setAttribute("href", `../html/bookDetails.html?index=${book.id}`)
