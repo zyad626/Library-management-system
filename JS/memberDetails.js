@@ -4,7 +4,6 @@ var Email = document.getElementById('email')
 var memberImage =document.getElementById('memberImage')
 let Users = JSON.parse(localStorage.getItem('users'))
 window.onload = function (){
-    console.log(Users)
     var parameters = new URLSearchParams(window.location.search)
     var userIndex = parameters.get("index")
     ID.textContent= "#"+Users[userIndex].id
@@ -13,3 +12,12 @@ window.onload = function (){
     memberImage.setAttribute('src',Users[userIndex].img)
 }
 
+const delete_member = function(){
+    var parameters = new URLSearchParams(window.location.search)
+    var userIndex = parameters.get("index")
+    Users.splice(userIndex, 1)
+
+    Users.forEach((user, index)=>user.id = index) //correct the ids after removing the user
+    localStorage.setItem("users", JSON.stringify(Users))
+    window.open("../html/all_members.html", "_self")
+}
