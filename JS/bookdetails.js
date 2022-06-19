@@ -3,6 +3,7 @@ var bookDescription= document.getElementById('bookDescription')
 var bookImage= document.getElementById('bookImage')
 var Author = document.getElementById('Author')
 let Books = JSON.parse(localStorage.getItem('books'))
+let Users = JSON.parse(localStorage.getItem('users'))
 window.onload = function (){
     var parameters = new URLSearchParams(window.location.search)
     var bookIndex = parameters.get("index")
@@ -12,10 +13,10 @@ window.onload = function (){
     Author.textContent = "Author: "+Books[bookIndex].author
 }
 
+//Edit Form
 let titleChange = document.getElementById('titleMod')
 let descriptionChange = document.getElementById('descriptionMod')
 let authorChange = document.getElementById('authorMod')
-
 function openEditForm() {
   if (document.getElementById("deleteForm").style.display == "block"){
     document.getElementById("deleteForm").style.display = "none";
@@ -42,7 +43,7 @@ function submitEditForm() {
 }
   
 
-
+  //Delete Form
   let adminPassword = document.getElementById('adminPassword')
   function openDeleteForm() {
     if (document.getElementById("editForm").style.display == "block"){
@@ -72,6 +73,8 @@ function submitDeleteForm() {
   function closeDeleteForm() {
     document.getElementById("deleteForm").style.display = "none";}
 
+
+    //Borrow Form
     let pickupDate = document.getElementById('pickupDate')
     let returnDate = document.getElementById('returnDate')
     function openBorrowForm() {
@@ -89,8 +92,13 @@ function submitDeleteForm() {
       }
     }
   function submitBorrowForm() {
-      if(pickupDate.value == returnDate.value ){
-        window.alert("minimum borrow period is a day")
+      let date = new Date()
+      console.log(new Date(pickupDate.value).getTime())
+      console.log(date.getTime())
+      if(pickupDate.value == returnDate.value || pickupDate.value > returnDate.value || 
+        new Date(pickupDate.value).getDate() < date.getDate() ||  new Date(pickupDate.value).getMonth() < date.getMonth()
+        ||  new Date(pickupDate.value).getFullYear() < date.getFullYear()){
+        window.alert("wrong dates")
       }
       else{
         document.getElementById("borrowForm").style.display = "none";
@@ -102,6 +110,13 @@ function submitDeleteForm() {
         Books[bookIndex].available = returnDate.value
         Books[bookIndex].isBorrowed = true
         localStorage.setItem('books',JSON.stringify(Books))
+        if(!Users[userId.id].borrowedBooks){
+          Users[userId.id].borrowedBooks = Books[bookIndex].title
+        }
+        else{
+          Users[userId.id].borrowedBooks += ", "+Books[bookIndex].title
+        }
+        localStorage.setItem('users',JSON.stringify(Users))
       }
     }
     function closeBorrowForm() {
