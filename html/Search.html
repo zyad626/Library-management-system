@@ -7,31 +7,39 @@
     <title>Library Managment System</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/Search.css">
+    <link rel="stylesheet" href="../css/All_Books.css">
+    <link rel="stylesheet" href="../css/all_members.css">
 </head>
 <body>
     <header>
-        <a href="home.html" id="logo"><img src="../images/LMS-logos.jpeg" alt="LMS-logos"></a>
+        <a href="home.html" id="logo"><img src="../images/LMS-logos.jpeg" alt="LMS-logos"></a>  
         <h1>Library Management System</h1>
-        <div class="header-right">
-            <a href="login.html">Login</a>
-            <a href="Signup.html">Sign up</a>
+        <div class="icon-div">
+            <h3>Clark Kent</h3>
+            <a href=""><img src="../images/icons8-male-user-96.png" alt="profile icon"></a>
         </div>
     </header>
 
     <nav>
-        <a href="home.html" class="with-border">Home</a>
-        <a href="" class="with-border">All Books</a>
-        <a href="" class="with-border">All Members</a>
+        <a href="home_Admin.html" class="with-border">Home</a>
+        <a href="All_Books.html" class="with-border">All Books</a>
+        <a href="all_members.html" class="with-border">All Members</a>
         <a href="Search.html">Search</a>
     </nav>
 
     <div id="searchbar">
-        <form action="" method="">
+        <form action="" method="" onsubmit="return search(event)">
             <div>
-                <input type="text" name="Search" placeholder="Title/Author"/>
+                <input type="text" name="Search" placeholder="Title/Author" id="search-input"/>
                 <input type="image" src="../images/search_icon.png" name="Search"/>
+                <label for="user-criteria">Users</label>
+                <input type="radio" name="criteria" id="user-criteria">
+                <label for="book-criteria">Books</label>
+                <input type="radio" name="criteria" id="book-criteria" checked>
             </div>
     </div>
+
+    <div id="cards-wrapper"></div>
     
     <footer>
         <span id="footer-links">
@@ -41,5 +49,7 @@
             &copy;2022 ASU Library
         </span>
     </footer>
+    <script src="../js/setup.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 </html>

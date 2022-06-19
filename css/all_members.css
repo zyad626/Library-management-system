@@ -1,25 +1,25 @@
-.cards-wrapper{
+.members-wrapper{
     position: relative;
     z-index: 1;
     width: 100%;
     margin-top: 50px;
     text-align: center;
 }
-    .cards-wrapper .member{
+    .members-wrapper .member{
         /* float: left; */
         display: inline-block;
         text-align: center;
         width: 12%;
         margin: 0px 50px 0px 50px;
     }
-        .cards-wrapper .member img{
+        .members-wrapper .member img{
             width: 100px;
             height: 100px;
             border-radius: 50%;
             position: relative;
             z-index: 2;
         }
-        .cards-wrapper .member .info{
+        .members-wrapper .member .info{
             /* background-color: dodgerblue;
             color: white; */
             background-color: #f1f1f1;
