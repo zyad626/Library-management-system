@@ -76,7 +76,7 @@ const create_users = function(results){
         let info_div = document.createElement("div")
         let name_element = document.createElement("h2")
 
-        a.setAttribute("href", "")
+        a.setAttribute("href", `../html/memberDetails.html?index=${member.id}`)
         member_div.setAttribute("class", "member")
         img.setAttribute("src", "../images/man7.jpg")
         info_div.setAttribute("class","info")
