@@ -14,7 +14,7 @@ function add_data(){
       window.alert("passwords dont match")
   }
   else {
-    USERS.push({userame:Name,email:Email,password:Password}) 
+    USERS.push({userame:Name,email:Email,password:Password,id:USERS.length}) 
     localStorage.setItem('users',JSON.stringify(USERS))
     console.log(USERS)
     window.open("../html/Login.html","_self")
