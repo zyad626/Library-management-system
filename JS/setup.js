@@ -31,6 +31,7 @@ if(localStorage.getItem("current_user") != null){
 
     info_element.setAttribute("class", "icon-div")
     img.setAttribute("src", "../images/icons8-male-user-96.png")
+    icon_element.setAttribute("href", `../html/memberDetails.html?index=${current_user.id}`)
 
     info_element.appendChild(user_name)
     info_element.appendChild(icon_element)

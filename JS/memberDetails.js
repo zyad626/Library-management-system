@@ -21,3 +21,8 @@ const delete_member = function(){
     localStorage.setItem("users", JSON.stringify(Users))
     window.open("../html/all_members.html", "_self")
 }
+
+const logout = function(){
+    localStorage.removeItem("current_user")
+    window.open("../html/index.html", "_self")
+}
