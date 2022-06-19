@@ -10,8 +10,8 @@ if(localStorage.getItem("users") == null || localStorage.getItem("books") == nul
     {username:"Iman",email:"Iman@gmail.com",password:"I",isAdmin:false,id:"8",img:"../images/user.png"},
     {username:"admin",email:"admin@admin.com",password:"admin",isAdmin:true,id:"9",img:"../images/icons8-male-user-96.png"}]
 
-    let books_data = [{title:"lord of the rings",author:"stephen king",description:"great book",img:"../images/lord.jpg",id:"0"},
-    {title:"hobbit",author:"stephen queen",description:"good book",img:"../images/book2.png",id:"1"}
+    let books_data = [{title:"The Lord of the Rings",author:"J.R.R. Tolkien",description:"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them",img:"../images/lord.jpg",id:"0"}
+,{title:"The Hobbit",author:"J.R.R. Tolkien",description:"In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a hobbit-hole, and that means comfort",img:"../images/the hobbit.jpg",id:"1"}
 ,{title:"Harry Potter part 1",author:"J. K. Rowling",description:"Science fiction",img:"../images/harry potter part 1.jpg",id:"2"}
 ,{title:"Harry Potter part 2",author:"J. K. Rowling",description:"Science fiction",img:"../images/harry potter part 2.jpg",id:"3"}
 ,{title:"Harry Potter part 3",author:"J. K. Rowling",description:"Science fiction",img:"../images/harry potter part 3.jpg",id:"4"}
