@@ -7,7 +7,7 @@ window.onload = function (){
     console.log(Users)
     var parameters = new URLSearchParams(window.location.search)
     var userIndex = parameters.get("index")
-    ID.textContent= "ID: #"+Users[userIndex].id
+    ID.textContent= "#"+Users[userIndex].id
     Name.textContent = "Name: "+ Users[userIndex].username
     Email.textContent = "Email: "+ Users[userIndex].email
     memberImage.setAttribute('src',Users[userIndex].img)

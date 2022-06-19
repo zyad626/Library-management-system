@@ -16,10 +16,10 @@ function add_data(){
   }
   else {
     if(Image.value){
-      USERS.push({userame:Name,email:Email,password:Password,id:USERS.length.toString(),img:Image.value}) 
+      USERS.push({userame:Name,email:Email,password:Password,isAdmin:false,id:USERS.length.toString(),img:Image.value}) 
     }
     else{
-      USERS.push({userame:Name,email:Email,password:Password,id:USERS.length.toString(),img:"../images/icons8-male-user-96.png"}) 
+      USERS.push({userame:Name,email:Email,password:Password,isAdmin:false,id:USERS.length.toString(),img:"../images/icons8-male-user-96.png"}) 
     }
     localStorage.setItem('users',JSON.stringify(USERS))
     window.open("../html/Login.html","_self")
