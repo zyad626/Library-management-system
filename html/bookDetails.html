@@ -34,8 +34,24 @@
     </div>
 
     <div id="user_button">
-        <button>Rent</button>
+        <button onclick="openBorrowForm()">Borrow</button>
     </div>
+
+    <div id="borrowForm">
+        <form id = "FormContainer">
+            <div>
+                <label>pickup date</label>
+                <input type="date" name="pickup date" id="pickupDate"/>
+            </div>
+            <div>
+                <label>return date</label>
+                <input type="date" name="return date" id="returnDate"/>
+            </div>
+            <div>  <input type="button" id="button" value="Submit" onclick="submitBorrowForm()"></div>
+            <div>  <input type="button" id="button" value="Close" onclick="closeBorrowForm()"></div>
+        </form>
+    </div> 
+
     <div id="admin_buttons" class="for-admin">
         <button id="admin_button1" onclick="openEditForm()">Edit Book</button>  
         <button  onclick="openDeleteForm()">Delete Book</button>

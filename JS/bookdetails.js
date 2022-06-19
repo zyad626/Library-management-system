@@ -71,3 +71,38 @@ function submitDeleteForm() {
   }
   function closeDeleteForm() {
     document.getElementById("deleteForm").style.display = "none";}
+
+    let pickupDate = document.getElementById('pickupDate')
+    let returnDate = document.getElementById('returnDate')
+    function openBorrowForm() {
+      var parameters = new URLSearchParams(window.location.search)
+      var bookIndex = parameters.get("index")
+      if(localStorage.getItem("current_user") != null){
+        if(Books[bookIndex].isBorrowed == true){
+          window.alert("Book is out of stock and will be avaliable at " + Books[bookIndex].available)
+          return
+        }
+        document.getElementById("borrowForm").style.display = "block";
+      }
+      else{
+        window.open("../html/SignUp.html")
+      }
+    }
+  function submitBorrowForm() {
+      if(pickupDate.value == returnDate.value ){
+        window.alert("minimum borrow period is a day")
+      }
+      else{
+        document.getElementById("borrowForm").style.display = "none";
+        let userId = JSON.parse(localStorage.getItem('current_user'))
+        var parameters = new URLSearchParams(window.location.search)
+        var bookIndex = parameters.get("index")
+        Books[bookIndex].borrowUser = userId.id
+        Books[bookIndex].borrowed = pickupDate.value
+        Books[bookIndex].available = returnDate.value
+        Books[bookIndex].isBorrowed = true
+        localStorage.setItem('books',JSON.stringify(Books))
+      }
+    }
+    function closeBorrowForm() {
+      document.getElementById("borrowForm").style.display = "none";}

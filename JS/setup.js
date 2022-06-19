@@ -11,8 +11,8 @@ if(localStorage.getItem("users") == null || localStorage.getItem("books") == nul
     {username:"admin",email:"admin@admin.com",password:"admin",isAdmin:true,id:"9",img:"../images/icons8-male-user-96.png"}]
 
     let books_data = [
-        {title:"lord of the rings",author:"stephen king",description:"great book",img:"../images/book1.png",id:"0"},
-        {title:"hobbit",author:"stephen queen",description:"good book",img:"../images/book2.png",id:"1"}
+        {title:"lord of the rings",author:"stephen king",description:"great book",img:"../images/book1.png",id:"0",isBorrowed:false},
+        {title:"hobbit",author:"stephen queen",description:"good book",img:"../images/book2.png",id:"1",isBorrowed:false}
 ]
     localStorage.setItem('users',JSON.stringify(user_data))
     localStorage.setItem('books',JSON.stringify(books_data))
