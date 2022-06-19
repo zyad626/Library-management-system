@@ -2,6 +2,7 @@ var ID = document.getElementById('ID')
 var Name = document.getElementById('name')
 var Email = document.getElementById('email')
 var memberImage =document.getElementById('memberImage')
+var borrowed = document.getElementById('books')
 let Users = JSON.parse(localStorage.getItem('users'))
 
 var parameters = new URLSearchParams(window.location.search)
@@ -11,6 +12,9 @@ window.onload = function (){
     Name.textContent = "Name: "+ Users[userIndex].username
     Email.textContent = "Email: "+ Users[userIndex].email
     memberImage.setAttribute('src',Users[userIndex].img)
+    if(Users[userIndex].borrowedBooks){
+        borrowed.textContent = "Borrowed Books: "+ Users[userIndex].borrowedBooks
+    }
 }
 
 if(localStorage.getItem("current_user") == null || userIndex != JSON.parse(localStorage.getItem("current_user")).id)

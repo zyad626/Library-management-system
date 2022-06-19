@@ -32,3 +32,16 @@ label{
     display: block;
     text-align: left;
 }
+#link{
+    text-align: left;
+}
+a:link{
+    color: #8AB4F8;
+    text-decoration: none;
+} 
+a:hover{
+    text-decoration: underline;
+}
+a:visited{
+    color: purple;
+}
