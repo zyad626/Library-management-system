@@ -1,3 +1,14 @@
+window.onclick = function(){
+    let book_criteria = document.getElementById("book-criteria")
+    let user_criteria = document.getElementById("user-criteria")
+    let searchBox = document.getElementById("search-input")
+    if(book_criteria.checked){
+        searchBox.setAttribute('placeholder','Tilte/Author')
+    }
+    else if(user_criteria.checked){
+        searchBox.setAttribute('placeholder','Name')
+    }
+}
 const search = function(e){
     e.preventDefault()
     let value = document.getElementById("search-input").value
