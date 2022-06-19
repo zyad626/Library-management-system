@@ -16,12 +16,12 @@ const search = function(e){
 }
 
 const book_search = function(value){
-    const results = books.filter(book => book.title.includes(value) || book.author.includes(value))
+    const results = books.filter(book =>book.title.toLowerCase().includes(value.toLowerCase()) || book.author.toLowerCase().includes(value.toLowerCase()))
     return results
 }
 
 const user_search = function(value){
-    const results = users.filter(user => user.username.toLowerCase().includes(value))
+    const results = users.filter(user => user.username.toLowerCase().includes(value.toLowerCase()))
     return results
 }
 
