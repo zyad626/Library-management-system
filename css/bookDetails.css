@@ -19,8 +19,9 @@
 #description h3{
     text-decoration: underline;
 }
-#button{
+#user_button{
     text-align: center;
+    margin-bottom: 20px;
 }
 
 #admin_buttons{
@@ -37,7 +38,7 @@ button{
     font-size: 15px;
     border-radius:5px ;
     width: 300px;
-    height: 50px;
+    height: fit-content;
 }
 
 div input{

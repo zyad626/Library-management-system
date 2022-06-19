@@ -7,7 +7,8 @@
     <title>All Books</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/All_Books.css">
-    
+    <link rel="stylesheet" href="../css//add_form.css">
+
 </head>
 <body>
     <header>
@@ -25,6 +26,29 @@
 
     </div>
     
+    <div id="admin_buttons" class="for-admin">
+        <button id="addbutton" onclick="openAddForm()">Add Book</button>  
+    </div>
+
+    <div id="addForm">
+        <form id = "FormContainer">
+            <div>
+                <label>Title</label>
+                <input type="text" name="title" id="newTitle"d/>
+            </div>
+            <div>
+                <label>Description</label>
+                <input type="text" name="description" id="newDescription"/>
+            </div>
+            <div>
+                <label>Author</label>
+                <input type="text" name="author" id="newAuthor"/>
+            </div>
+            <div>  <input type="button" id="button" value="Submit" onclick="submitAddForm()"></div>
+            <div>  <input type="button" id="button" value="Close" onclick="closeAddForm()"></div>
+        </form>
+    </div> 
+
     <footer>
         <span id="footer-links">
             <a href="">Privacy Policy</a> | <a href="">Terms and conditions</a> | <a href="">Security</a>
@@ -35,6 +59,7 @@
     </footer>
     <script src="../js/setup.js"></script>
     <script src="../js/utils.js"></script>
+    <script src="../JS/All-Books.js"></script>
     <script>create_books(undefined, "books-wrapper")</script>
 </body>
 </html>
