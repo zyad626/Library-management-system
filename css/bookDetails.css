@@ -60,7 +60,7 @@
     line-height: 1.7em;
     font-size: 21px;
     font-weight: lighter;
-    overflow: hidden;
+    overflow: auto;
     margin-left: 31%;
   }
 
@@ -80,7 +80,7 @@
     line-height: 1.7em;
     font-size: 21px;
     font-weight: lighter;
-    overflow: hidden;
+    overflow:auto;
     margin-left: 31%;
   }
   
@@ -139,7 +139,7 @@
 
   #deleteMember{
     position: relative;
-    bottom: 250%;
+    bottom: 225%;
     margin-bottom: 10%;
   }
   
