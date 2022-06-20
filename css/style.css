@@ -14,10 +14,12 @@ header{
     header h1{
         float: left;
         margin-top:calc(62.5px - 16px);
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
     .header-right{
         float: right;
         margin-top: calc(62.5px - 16px);
+        font-family: Arial, Helvetica, sans-serif;
     }
         .header-right a{
             font-size: 18px;
