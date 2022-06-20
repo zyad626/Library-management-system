@@ -1,7 +1,7 @@
 if(localStorage.getItem("users") == null || localStorage.getItem("books") == null){
     let user_data = [{username:"Ahmed",email:"Ahmed@gmail.com",password:"A",id:"0",img:"../images/user.png"},
     {username:"Bassem",email:"Bassem@gmail.com",password:"B",isAdmin:false,id:"1",img:"../images/user.png"},
-    {username:"Camel",email:"Camel@C",password:"C",isAdmin:false,id:"2",img:"../images/user.png"},
+    {username:"Camel",email:"Camel@gmail.com",password:"C",isAdmin:false,id:"2",img:"../images/user.png"},
     {username:"Donia",email:"Donia@gmail.com",password:"D",isAdmin:false,id:"3",img:"../images/user.png"},
     {username:"Emma",email:"Emma@gmail.com",password:"E",isAdmin:false,id:"4",img:"../images/user.png"},
     {username:"Farida",email:"Farida@gmail.com",password:"F",isAdmin:false,id:"5",img:"../images/user.png"},
