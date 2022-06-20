@@ -64,6 +64,29 @@
     margin-left: 31%;
   }
 
+  
+  .best-seller-checkbox{
+    display: inline;
+    height: 200px;
+    font-family: 'Playfair Display', serif;
+    color: black;
+    line-height: 1.7em;
+    font-size: 21px;
+    font-weight: lighter;
+    overflow: auto;
+    margin-left: 31%;
+    position: relative;
+    bottom:245%;
+    left: 137% ;
+    width: fit-content;
+  }
+  .best-seller-checkbox label{
+    display: inline;
+  }
+  .best-seller-checkbox input[type=checkbox]{
+    display: inline;
+  }
+
   .memberdesc h1{
     margin: 0 0 0 38px;
     padding-top: 30px;
@@ -91,13 +114,6 @@
     margin-left: 19%;
     position: relative;
     text-align: center;
-  }
-  
-  span {
-    display: inline-block;
-    height: 50px;
-    font-family: 'Suranna', serif;
-    font-size: 34px;
   }
   
   .butn button {
@@ -146,14 +162,28 @@
   .butn button:hover {
     background-color: #79b0a1;
   }
+
   
-div input{
-  width: 100%;
+#editForm input{
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
 }
+#deleteForm input{
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+#borrowForm input{
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
 input[type=text]{
     width:200px;
 }
@@ -201,8 +231,23 @@ label{
         z-index: 9;
       }
 
-input[type=button]{
+#editForm input[type=button]{
+    width: 100%;
     background-color: #17A798;
     color: white;
     font-size: 15px;
+}
+
+#deleteForm input[type=button]{
+  width: 100%;
+  background-color: #17A798;
+  color: white;
+  font-size: 15px;
+}
+
+#borrowForm input[type=button]{
+  width: 100%;
+  background-color: #17A798;
+  color: white;
+  font-size: 15px;
 }
