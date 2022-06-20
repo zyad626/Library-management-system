@@ -48,6 +48,10 @@ if(localStorage.getItem("users") == null || localStorage.getItem("books") == nul
 if(localStorage.getItem("session_type") != "admin")
     document.querySelectorAll(".for-admin").forEach((element)=>element.style.display = "none")
 
+else{
+    document.querySelectorAll(".userBorrowForm").forEach((element)=>element.style.display = "none")
+}
+
 if(localStorage.getItem("current_user") != null){
     let current_user = JSON.parse(localStorage.getItem("current_user"))
     
