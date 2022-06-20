@@ -11,6 +11,15 @@ window.onload = function (){
     bookDescription.textContent = Books[bookIndex].description
     bookImage.setAttribute('src',Books[bookIndex].img)
     Author.textContent = "Author: "+Books[bookIndex].author
+
+    var todaysDate = new Date();
+    var year = todaysDate.getFullYear();                        
+    var month = ("0" + (todaysDate.getMonth() + 1)).slice(-2); 
+    var day = ("0" + todaysDate.getDate()).slice(-2);           
+    var minDate = (year +"-"+ month +"-"+ day);
+    pickupDate.setAttribute('min',minDate)
+    returnDate.setAttribute('min',minDate)
+    
 }
 
 //Edit Form
@@ -91,12 +100,17 @@ function submitDeleteForm() {
         window.open("../html/SignUp.html")
       }
     }
+  
   function submitBorrowForm() {
       let date = new Date()
-      if(pickupDate.value == returnDate.value || pickupDate.value > returnDate.value || new Date(pickupDate.value).getFullYear() < date.getFullYear()){
-        window.alert("pickup date from today and upwards and borrow period of minimum one day")
+      if(pickupDate.value == returnDate.value){
+        window.alert("borrow period of minimum one day")
+        return
       }
-      else{
+      else if(pickupDate.value > returnDate.value){
+        window.alert("return date should be after pickup date")
+        return
+      }
         document.getElementById("borrowForm").style.display = "none";
         let userId = JSON.parse(localStorage.getItem('current_user'))
         var parameters = new URLSearchParams(window.location.search)
@@ -115,7 +129,6 @@ function submitDeleteForm() {
           Users[userId.id].numberOfBorrowedBooks += 1
         }
         localStorage.setItem('users',JSON.stringify(Users))
-      }
     }
     function closeBorrowForm() {
       document.getElementById("borrowForm").style.display = "none";}
@@ -139,7 +152,7 @@ function submitDeleteForm() {
             Users[i].borrowedBooks = titles.toString()
             Users[i].numberOfBorrowedBooks -= 1
             localStorage.setItem('users',JSON.stringify(Users))
-            window.alert(Books[bookIndex].title+" is avaliable to borrow now")
+            window.alert("Successful! "+Books[bookIndex].title+" is avaliable to borrow now")
             break;
           } 
         }
@@ -148,7 +161,7 @@ function submitDeleteForm() {
         Users[i].numberOfBorrowedBooks -= 1
         delete Users[i].borrowedBooks;
         localStorage.setItem('users',JSON.stringify(Users))
-        window.alert(Books[bookIndex].title+" is avaliable to borrow now")
+        window.alert("Successful! "+Books[bookIndex].title+" is avaliable to borrow now")
       }
     }
     else{
