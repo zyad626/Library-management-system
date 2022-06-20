@@ -1,8 +1,8 @@
 const books = JSON.parse(localStorage.getItem("books"))
 const users = JSON.parse(localStorage.getItem("users"))
 
-const create_books = function(results = books, parent_element = "cards-wrapper"){
-    let wrapper = document.getElementById(parent_element)
+const create_books = function(results = books, parent_element = ".cards-wrapper"){
+    let wrapper = document.querySelector(parent_element)
     wrapper.innerHTML = ""
 
     let books_wrapper = document.createElement("div")
@@ -37,8 +37,8 @@ const create_books = function(results = books, parent_element = "cards-wrapper")
     wrapper.appendChild(books_wrapper)
 }
 
-const create_users = function(results = users, parent_element = "cards-wrapper"){
-    let wrapper = document.getElementById(parent_element)
+const create_users = function(results = users, parent_element = ".cards-wrapper"){
+    let wrapper = document.querySelector(parent_element)
     wrapper.innerHTML = ""
 
     let users_wrapper = document.createElement("div")
