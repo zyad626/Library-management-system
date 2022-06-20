@@ -22,20 +22,32 @@
         <a href="Search.html">Search</a>
     </nav>   
 
-    <div id = details>
-        <img id="bookImage" src="" alt="">
-        <h1 id="title"></h1>
+    <div class="wrapper">
+        <div class="images">
+            <img id="bookImage" src="" alt="" height="420px" width="350px">
+        </div>
+        <div class="info">
+            <div class="desc">
+                <h1 id="title"></h1>
+                <h2 id="Author"></h2>
+                <p id="bookDescription"></p>
+            </div>
+            <div class ="userBorrowForm">
+                <div class="butn">
+                    <button onclick="openBorrowForm()">Borrow</button>
+                </div>
+            </div>
+            <div id="admin_buttons" class="for-admin">
+                <div class="butn">
+                    <button id="admin_button1" onclick="openEditForm()">Edit Book</button>  
+                    <button id="admin_button2" onclick="openDeleteForm()">Delete Book</button>
+                    <button id="admin_button3" onclick="bookAvailable()">Book Available</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div id="description">
-        <h3>About book</h3>
-        <p id="bookDescription"></p>
-        <p id="Author"></p>
-    </div>
-
-    <div id="user_button">
-        <button onclick="openBorrowForm()">Borrow</button>
-    </div>
+    
 
     <div id="borrowForm">
         <form id = "FormContainer">
@@ -51,12 +63,6 @@
             <div>  <input type="button" id="button" value="Close" onclick="closeBorrowForm()"></div>
         </form>
     </div> 
-
-    <div id="admin_buttons" class="for-admin">
-        <button id="admin_button1" onclick="openEditForm()">Edit Book</button>  
-        <button id="admin_button1" onclick="openDeleteForm()">Delete Book</button>
-        <button onclick="bookAvailable()">Book Available</button>
-    </div>
 
     <div id="editForm">
         <form id = "FormContainer">
@@ -87,15 +93,6 @@
             <div>  <input type="button" id="button" value="Close" onclick="closeDeleteForm()"></div>
         </form>
     </div> 
-
-    <footer>
-        <span id="footer-links">
-            <a href="">Privacy Policy</a> | <a href="">Terms and conditions</a> | <a href="">Security</a>
-        </span>
-        <span class="copy-right">
-            &copy;2022 ASU Library
-        </span>
-    </footer>
     <script src="../JS/setup.js"></script>
     <script src="../JS/bookdetails.js"></script>
 </body>

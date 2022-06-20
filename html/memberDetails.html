@@ -22,32 +22,28 @@
         <a href="Search.html">Search</a>
     </nav>  
 
-    <div id = details>
-        <img id="memberImage" src="" alt="">
-        <h1 id="ID"></h1>
+    <div class="wrapper">
+        <div class="images">
+            <img id="memberImage" src="" alt="" height="420px" width="350px">
+        </div>
+        <div class="info">
+            <div class="memberdesc">
+                <h1 id="ID"></h1>
+                <p id="email"></p>
+                <p id="name"></p>
+                <p id="books"></p>
+            </div>
+            <div class="butn">
+                <button id="logout-btn" onclick="logout()" class="for-current_user">Logout</button>
+            </div>
+            <div id="admin_buttons" class="for-admin">
+                <div class="butn">
+                    <button id="deleteMember" style="background-color: red;" onclick="delete_member()">Delete Member</button>
+                </div>  
+            </div>
+        </div>
     </div>
 
-    <div id="description">
-        <h3>About Member</h3>
-        <p id="email"></p>
-        <p id="name"></p>
-        <p id="books"></p>
-    </div>
-    
-    <div id="admin_buttons" class="for-admin">
-        <button id="admin_button1" style="background-color: red;" onclick="delete_member()">Delete Member</button>  
-    </div>
-
-    <button id="logout-btn" onclick="logout()" class="for-current_user">Logout</button>
-
-    <footer>
-        <span id="footer-links">
-            <a href="">Privacy Policy</a> | <a href="">Terms and conditions</a> | <a href="">Security</a>
-        </span>
-        <span class="copy-right">
-            &copy;2022 ASU Library
-        </span>
-    </footer>
     <script src="../JS/setup.js"></script>
     <script src="../JS/memberDetails.js"></script>
 </body>

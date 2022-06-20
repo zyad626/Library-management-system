@@ -1,46 +1,152 @@
-* {box-sizing: border-box;}
+.wrapper {
+    position: absolute;
+    height:71%;
+    width: 70%;
+    top: 21.5%;
+    margin: 50px 150px;
+    border-radius: 7px 7px 7px 7px;
+  }
+  
+  .images {
+    float: left;
+    height: 420px;
+    width: 350px;
+  }
+  
+  .images img {
+    border-radius: 7px 0 0 7px;
+    margin-left: 170px;
+    margin-top: 20px;
+  }
+  
+  .info {
+    float: left;
+    height: 420px;
+    width: 700px;
+    border-radius: 0 7px 10px 7px;
+    background-color: F1F5F9;
+  }
+  
+  .desc {
+    height: 300px;
+    width: 100%;
+  }
+  
+  .desc h1 {
+    margin: 0 0 0 38px;
+    padding-top: 30px;
+    font-size: 50px;
+    margin-left: 30%;
+    color: black;
+  }
+  
+  
+  .desc h2 {
+    margin: 0 0 47px 38px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin-left: 31%;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 0.2em;
+  }
+  
+  .desc p {
+    height: 200px;
+    margin: 0 0 0 38px;
+    font-family: 'Playfair Display', serif;
+    color: black;
+    line-height: 1.7em;
+    font-size: 21px;
+    font-weight: lighter;
+    overflow: hidden;
+    margin-left: 31%;
+  }
 
-#details img{
-    width: 150px;
-    height: 150px; 
-    text-align: center;
-}
-#details{
-    margin-top:50px;
-    text-align: center;
-}
-#details #description{
-    margin-left: 550px;
-    padding-bottom: 900px;
-}
-#description{
-    margin-left: 10px;
-}
-#description h3{
-    text-decoration: underline;
-}
-#user_button{
-    text-align: center;
-    margin-bottom: 20px;
-}
+  .memberdesc h1{
+    margin: 0 0 0 38px;
+    padding-top: 30px;
+    font-size: 50px;
+    margin-left: 30%;
+    color: black;
+  }
 
-#admin_buttons{
+  .memberdesc p{
+    height: 50px;
+    margin: 0 0 0 38px;
+    font-family: 'Playfair Display', serif;
+    color: black;
+    line-height: 1.7em;
+    font-size: 21px;
+    font-weight: lighter;
+    overflow: hidden;
+    margin-left: 31%;
+  }
+  
+  .butn {
+    height: 103px;
+    width: 350px;
+    margin-top: 10%;
+    margin-left: 19%;
+    position: relative;
     text-align: center;
-}
-
-#admin_button1{
-    margin-right: 50px;
-}
-
-button{
+  }
+  
+  span {
+    display: inline-block;
+    height: 50px;
+    font-family: 'Suranna', serif;
+    font-size: 34px;
+  }
+  
+  .butn button {
+    display: inline-block;
+    height: 50px;
+    width: 176px;
+    margin: 0 40px 0 16px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
     background-color: #17A798;
-    color: white;
-    font-size: 15px;
-    border-radius:5px ;
-    width: 300px;
-    height: fit-content;
-}
+    cursor: pointer;
+    outline: none;
+  }
 
+ #admin_button1{
+    position: relative;
+    left: 1%;
+    margin-bottom: 10%;
+  }
+ #admin_button2{
+    position: relative;
+    bottom: 84%;
+    left: 55%;
+    margin-bottom: 10%;
+  }
+ #admin_button3{
+    position: relative;
+    bottom: 168%;
+    left: 110% ;
+    margin-bottom: 10%;
+  }
+
+  #deleteMember{
+    position: relative;
+    bottom: 250%;
+    margin-bottom: 10%;
+  }
+  
+  .butn button:hover {
+    background-color: #79b0a1;
+  }
+  
 div input{
   width: 100%;
   padding: 15px;
@@ -48,6 +154,17 @@ div input{
   border: none;
   background: #f1f1f1;
 }
+input[type=text]{
+    width:200px;
+}
+input[type=password]{
+    width:150px;
+}
+
+input[type=date]{
+    width:150px;
+}
+
 label{
     display: block;
     text-align: left;
