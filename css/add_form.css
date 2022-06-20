@@ -57,3 +57,10 @@
         font-size: 15px;
         width: 100%;
     }
+
+    input[type=submit]{
+        width: 100%;
+        background-color: #17A798;
+        color: white;
+        font-size: 15px;
+      }

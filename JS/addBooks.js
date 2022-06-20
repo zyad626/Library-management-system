@@ -3,8 +3,8 @@ function openAddForm() {
     document.getElementById("addForm").style.display = "block";
   }
 
-function submitAddForm() {
-
+function submitAddForm(event) {
+  event.preventDefault()
   let file_input = document.getElementById("bookImage")
   const FR = new FileReader();
 
