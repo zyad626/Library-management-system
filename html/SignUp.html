@@ -10,7 +10,7 @@
 <body>
     <div>
         <a href="index.html" id="logo"><img src="../images/LMS-logos.jpeg" alt="LMS-logos"></a>
-        <form>
+        <form onsubmit="return add_data(event)">
             <div>
                 <label>Name</label>
                 <input type="text" name="Name" id="name" required/>
@@ -27,7 +27,7 @@
                 <label>Confirm Password</label>
                 <input type="password" name="cpassword" id="cPassword" required/>
             </div>
-            <input type="button" id="button" value="Signup" onclick="add_data()">
+            <input type="submit" id="button" value="Signup">
             <div id="link">
                 <label style="display:inline">already have an account?</label>
                 <a style="display: inline ;" href="Login.html">Login</a>
