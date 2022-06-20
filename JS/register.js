@@ -1,5 +1,6 @@
 let USERS = JSON.parse( localStorage.getItem('users'))
-function add_data(){
+function add_data(event){
+  event.preventDefault()
   let Name =  document.getElementById("name").value
   let Email = document.getElementById("email").value
   let Password = document.getElementById('password').value
