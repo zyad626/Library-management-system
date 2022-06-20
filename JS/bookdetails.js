@@ -99,7 +99,7 @@ function openBorrowForm() {
   var bookIndex = parameters.get("index")
   if(localStorage.getItem("current_user") != null){
     if(Books[bookIndex].isBorrowed == true){
-      window.alert("Book is out of stock and will be avaliable at " + Books[bookIndex].available)
+      window.alert("Book is out of stock expected to be avaliable at " + Books[bookIndex].available)
       return
     }
     document.getElementById("borrowForm").style.display = "block";
