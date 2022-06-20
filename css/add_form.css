@@ -1,17 +1,29 @@
 
     #admin_buttons{
-        position: fixed ;
-        top: 215px;
-        right: 15px
+        height: 50px;
+        width: 130px;
+        margin-top: -5%;
+        margin-left: 91%;
+        position: relative;
+        text-align: center;
     }
     
     button{
-        background-color: #17A798;
-        color: white;
-        font-size: 15px;
-        border-radius:5px ;
-        width: fit-content;
-        height: fit-content;
+    display: inline-block;
+    height: 50px;
+    width: 130px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    background-color: #17A798;
+    cursor: pointer;
+    outline: none;
     }
     
     div input{
