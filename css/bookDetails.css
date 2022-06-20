@@ -238,6 +238,13 @@ label{
     font-size: 15px;
 }
 
+#editForm input[type=submit]{
+  width: 100%;
+  background-color: #17A798;
+  color: white;
+  font-size: 15px;
+}
+
 #deleteForm input[type=button]{
   width: 100%;
   background-color: #17A798;

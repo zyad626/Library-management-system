@@ -39,7 +39,8 @@ function openEditForm() {
     descriptionChange.value = bookDescription.textContent
     authorChange.value = Author.textContent.replace("Author: ","")
   }
-function submitEditForm() {
+function submitEditForm(event) {
+    event.preventDefault()
     let Books = JSON.parse(localStorage.getItem('books'))
     document.getElementById("editForm").style.display = "none";
     Title.textContent= titleChange.value

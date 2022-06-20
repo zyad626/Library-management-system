@@ -69,20 +69,20 @@
     </div> 
 
     <div id="editForm">
-        <form id = "FormContainer">
+        <form id = "FormContainer" onsubmit="return submitEditForm(event)">
             <div>
                 <label>Title</label>
-                <input type="text" name="title" id="titleMod"d/>
+                <input type="text" name="title" id="titleMod" required/>
             </div>
             <div>
                 <label>Description</label>
-                <input type="text" name="description" id="descriptionMod"/>
+                <input type="text" name="description" id="descriptionMod" required/>
             </div>
             <div>
                 <label>Author</label>
-                <input type="text" name="author" id="authorMod"/>
+                <input type="text" name="author" id="authorMod" required/>
             </div>
-            <div>  <input type="button" id="button" value="Submit" onclick="submitEditForm()"></div>
+            <div>  <input type="submit" id="button" value="Submit" ></div>
             <div>  <input type="button" id="button" value="Close" onclick="closeEditForm()"></div>
         </form>
     </div> 
